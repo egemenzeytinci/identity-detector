@@ -1,0 +1,6 @@
+[config]
+
+# Ingore defined errors and warnings
+disable=
+    invalid-name,
+    missing-module-docstring
