@@ -1,0 +1,13 @@
+# PyCharm
+*.iml
+.idea/
+
+# VSCode
+.vscode/
+
+# Python
+*.pyc
+__pycache__
+
+# MacOS
+.DS_Store
