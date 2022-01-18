@@ -28,6 +28,3 @@ jobs:
         run: |
           pip install pylint
           pylint `find . | grep '.*.py$'`
-      - name: Unit testing
-        run: |
-          TZ=UTC CONFIG=./default.ini python -m unittest test
