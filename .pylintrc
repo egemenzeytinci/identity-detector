@@ -3,4 +3,6 @@
 # Ingore defined errors and warnings
 disable=
     invalid-name,
-    missing-module-docstring
+    missing-module-docstring,
+    missing-class-docstring,
+    too-many-branches
