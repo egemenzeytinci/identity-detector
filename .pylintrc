@@ -5,4 +5,10 @@ disable=
     invalid-name,
     missing-module-docstring,
     missing-class-docstring,
-    too-many-branches
+    too-many-branches,
+    too-few-public-methods,
+    wrong-import-order
+
+# Do not check given classes
+# They returns E1101 error (no-member)
+ignored-classes=tensorflow.keras.layers
