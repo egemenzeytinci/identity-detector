@@ -112,6 +112,6 @@ class Trainer:
         model.fit(
             self._train_data,
             validation_data=self._validation_data,
-            epochs=100,
+            epochs=self._epochs,
             callbacks=[es, tb, mc]
         )
