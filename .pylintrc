@@ -3,6 +3,8 @@
 # Ingore defined errors and warnings
 disable=
     invalid-name,
+    logging-fstring-interpolation,
+    logging-not-lazy,
     missing-module-docstring,
     missing-class-docstring,
     too-many-branches,
