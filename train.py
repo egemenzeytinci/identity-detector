@@ -1,4 +1,4 @@
-from model import Trainer
+from model.train import Trainer
 
 
 if __name__ == '__main__':
