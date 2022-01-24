@@ -15,7 +15,8 @@ You need to download dataset with using download script,
 $ python3 download.py ./default.ini # or custom ini file
 ```
 
-Then train your model as follows,
+Then train your model as follows.
+Please keep in mind, if you've a saved model in the checkpoint path, the command below continues the training.
 
 ```bash
 $ python3 train.py ./default.ini # or custom ini file
@@ -43,4 +44,4 @@ python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/f
 
 ## Examples
 
-![](image/example.eps)
+![](image/example.png)
