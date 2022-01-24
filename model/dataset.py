@@ -6,7 +6,7 @@ from util.config import config
 class Dataset:
     def __init__(self):
         # path of the data
-        self._path = config.loader.path
+        self._path = f'{config.loader.path}/train'
 
         # image size
         self._size = config.loader.size
