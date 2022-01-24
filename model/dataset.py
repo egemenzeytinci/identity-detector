@@ -27,7 +27,6 @@ class Dataset:
             self._path,
             validation_split=0.2,
             subset='training',
-            seed=0,
             image_size=(self._size, self._size),
             batch_size=self._batch_size
         )
@@ -36,7 +35,6 @@ class Dataset:
             self._path,
             validation_split=0.2,
             subset='validation',
-            seed=0,
             image_size=(self._size, self._size),
             batch_size=self._batch_size
         )

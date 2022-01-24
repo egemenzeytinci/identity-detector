@@ -40,3 +40,7 @@ Then, predict with using folder or only one file as follows,
 ```bash
 python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/file
 ```
+
+## Examples
+
+![](image/example.eps)
