@@ -1,7 +1,9 @@
 # Identity Card Detector
+
 National ID cards detector
 
 ## Install
+
 Install dependencies by using `pip`,
 
 ```bash
@@ -9,6 +11,7 @@ $ pip3.9 install -r requirements.txt
 ```
 
 ## Training
+
 You need to download dataset with using download script,
 
 ```bash
@@ -42,6 +45,6 @@ Then, predict with using folder or only one file as follows,
 python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/file
 ```
 
-## Examples
+## Examples
 
 ![](image/example.png)
