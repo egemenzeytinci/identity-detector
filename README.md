@@ -19,13 +19,14 @@ $ python3 download.py ./default.ini # or custom ini file
 ```
 
 Then train your model as follows.
-Please keep in mind, if you've a saved model in the checkpoint path, the command below continues the training.
+
+**Please keep in mind**, if you've a saved model in the checkpoint path, the command below continues the training.
 
 ```bash
 $ python3 train.py ./default.ini # or custom ini file
 ```
 
-Please notice that, you need to change the path variables in the default config file named as `default.ini`.
+**Please notice that**, you need to change the path variables in the default config file named as `default.ini`.
 
 You can follow your model on the tensorboard,
 
@@ -33,11 +34,11 @@ You can follow your model on the tensorboard,
 tensorboard --logdir /tmp/tensorboard-logs
 ```
 
-If you change `logdir` variable under the model section in the default config, you need to change the path to `/tmp/tensorboard-logs`.
+**Please notice that**, If you change `logdir` variable under the model section in the default config, you need to change the path to `/tmp/tensorboard-logs`.
 
 ## Prediction
 
-You can download model [here](https://drive.google.com/file/d/1K8A6og7Q4lI-UmH8h-YHZw0EJKTMDlow).
+You can download model [here](https://drive.google.com/file/d/1dUAbGskgIqBWs86ut3m9Azx93_QOyV0u).
 
 Then, predict with using folder or only one file as follows,
 
