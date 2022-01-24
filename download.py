@@ -1,4 +1,5 @@
 import gdown
+import os
 from util.config import config
 from zipfile import ZipFile
 
@@ -10,3 +11,5 @@ if __name__ == '__main__':
     # extract zip file
     with ZipFile('train.zip', 'r') as f:
         f.extractall()
+
+    os.remove('train.zip')
