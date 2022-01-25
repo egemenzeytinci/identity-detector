@@ -31,7 +31,7 @@ $ python3 train.py ./default.ini # or custom ini file
 You can follow your model on the tensorboard,
 
 ```bash
-tensorboard --logdir /tmp/tensorboard-logs
+$ tensorboard --logdir /tmp/tensorboard-logs
 ```
 
 **Please notice that**, If you change `logdir` variable under the model section in the default config, you need to change the path to `/tmp/tensorboard-logs`.
@@ -43,7 +43,13 @@ You can download model [here](https://drive.google.com/file/d/1dUAbGskgIqBWs86ut
 Then, predict with using folder or only one file as follows,
 
 ```bash
-python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/file
+$ python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/file
+```
+
+Or you can use your camera,
+
+```bash
+$ python3 stream.py --model /path/to/model
 ```
 
 ## Examples
