@@ -1,5 +1,6 @@
 attrdict==2.0.1
 configobj==5.0.6
 gdown==4.2.0
+opencv-python==4.5.5.62 # if you will use stream script
 pillow==9.0.0
 tensorflow==2.7.0

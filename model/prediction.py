@@ -42,14 +42,38 @@ class Predictor:
 
         return tf.expand_dims(img_array, 0)
 
-    def _predict_class(self, img):
+    def _process(self, img):
+        """
+        Process raw image
+
+        :param np.array img: image array
+        :return: image eager tensor
+        :rtype: tf.python.framework.ops.EagerTensor
+        """
+        # resize image
+        img = tf.image.resize(
+            img,
+            size=[self._size, self._size]
+        )
+
+        # image to array
+        img_array = tf.keras.utils.img_to_array(img)
+
+        return tf.expand_dims(img_array, 0)
+
+    def predict_class(self, img, processed=True):
         """
         Predict class from image tensor or file path
 
         :param tf.python.framework.ops.EagerTensor img: image tensor
+        :param bool processed: if processed before or not
         :return: image class and probability score
         :rtype: tuple[str, float]
         """
+        # if the image has not been processed before
+        if not processed:
+            img = self._process(img)
+
         # predict image class
         predictions = self._model.predict(img)
 
@@ -59,7 +83,7 @@ class Predictor:
         # get class name by max probability score
         img_cls = self._class_names[np.argmax(score)]
 
-        # probability score over a hundred
+        # probability score on the scale of hundred
         prob = 100 * np.max(score)
 
         return img_cls, prob
@@ -82,7 +106,7 @@ class Predictor:
                 # read image from file path
                 img = self._read(k)
 
-                img_cls, prob = self._predict_class(img)
+                img_cls, prob = self.predict_class(img)
 
                 d = AttrDict()
 
@@ -96,7 +120,7 @@ class Predictor:
             # read image from file path
             img = self._read(path)
 
-            img_cls, prob = self._predict_class(img)
+            img_cls, prob = self.predict_class(img)
 
             d = AttrDict()
 
