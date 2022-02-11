@@ -1,6 +1,7 @@
 # Identity Card Detector
 
-National ID cards detector
+You can check the application from the website below,
+https://identity-detector.herokuapp.com
 
 ## Install
 
