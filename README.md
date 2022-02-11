@@ -1,6 +1,7 @@
 # Identity Card Detector
 
 You can check the application from the website below,
+
 https://identity-detector.herokuapp.com
 
 ## Install
@@ -45,6 +46,28 @@ Then, predict with using folder or only one file as follows,
 
 ```bash
 $ python3 predict.py --model /path/to/model --path /path/to/folder # or /path/to/file
+```
+
+Here is the example response for a folder,
+
+```json
+[
+    {
+        "name": "identity_card.jpg",
+        "prediction": "document",
+        "probability": 99.99996423721313
+    },
+    {
+        "name": "non_document.jpg",
+        "prediction": "non_document",
+        "probability": 100.0
+    },
+    {
+        "name": "selfie.jpg",
+        "prediction": "selfie",
+        "probability": 99.23766255378723
+    }
+]
 ```
 
 Or you can use your camera,
